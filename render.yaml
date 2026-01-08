@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: mobileservice-django
+    env: python
+    pythonVersion: 3.12.3
+    buildCommand: |
+      pip install -r requirements-render.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    startCommand: daphne mobileservice.asgi:application
