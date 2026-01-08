@@ -15,9 +15,9 @@ DEBUG = os.getenv("DEBUG", "1") == "1"
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    ".ngrok-free.dev",
-     ".loclx.io",
+    ".onrender.com",   # ✅ allow all Render subdomains
 ]
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
 
